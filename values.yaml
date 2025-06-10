@@ -1,0 +1,21 @@
+# Default values for Grafana using Helm
+# This file can be used as values.yaml for the Grafana Helm chart
+
+adminPassword: admin
+
+service:
+  type: NodePort
+  nodePort: 30300
+
+persistence:
+  enabled: false
+
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+      - name: Prometheus
+        type: prometheus
+        access: proxy
+        url: http://prometheus-server:9090
+        isDefault: true
