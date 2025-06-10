@@ -1,0 +1,6 @@
+environment:
+  name: observability
+  identifier: observability
+  orgIdentifier: default
+  projectIdentifier: Observability
+  type: PreProduction
